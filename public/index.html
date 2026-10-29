@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Capture your next bright idea with Quickidea."
+    />
+    <title>Quickidea</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <a class="brand" href="/" aria-label="Quickidea home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          Quickidea
+        </a>
+        <span class="header-note">A little space for big thoughts</span>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">YOUR IDEAS, IN ONE PLACE</p>
+        <h1 id="page-title">Catch that <span>bright idea.</span></h1>
+        <p class="intro">
+          Good ideas show up anywhere. Save yours before they float away.
+        </p>
+
+        <form class="idea-form" id="idea-form">
+          <label class="sr-only" for="idea-input">Write down an idea</label>
+          <textarea
+            id="idea-input"
+            name="idea"
+            rows="3"
+            maxlength="500"
+            placeholder="What are you thinking about?"
+            required
+          ></textarea>
+          <div class="form-footer">
+            <span class="hint">Keep it rough. You can refine it later.</span>
+            <button type="submit">Save idea <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+
+        <section class="ideas-section" aria-labelledby="ideas-title">
+          <div class="ideas-heading">
+            <h2 id="ideas-title">Your ideas</h2>
+            <span class="idea-count" id="idea-count">0 ideas</span>
+          </div>
+          <ul class="idea-list" id="idea-list" aria-live="polite"></ul>
+          <p class="empty-state" id="empty-state">
+            Your next great idea starts here.
+          </p>
+        </section>
+      </section>
+      <footer class="footer">Made for the thoughts worth keeping.</footer>
+    </main>
+  </body>
+</html>
